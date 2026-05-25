@@ -63,13 +63,6 @@
             margin-top: 0;
         }
 
-        h3 {
-            font-size: 1.1rem;
-            color: #2c3e50;
-            margin-top: 16px;
-            margin-bottom: 8px;
-        }
-
         p {
             margin-bottom: 12px;
         }
@@ -106,6 +99,14 @@
         .note {
             background-color: #fff3e0;
             border-left: 4px solid #e67e22;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 8px;
+        }
+
+        .warning {
+            background-color: #ffebee;
+            border-left: 4px solid #e53935;
             padding: 12px 16px;
             margin: 16px 0;
             border-radius: 8px;
@@ -230,15 +231,21 @@
             <!-- 8. Suscripciones -->
             <h2>8. Suscripciones y Pagos</h2>
             <p>La aplicación utiliza <strong>Google Play Billing</strong> para gestionar suscripciones.</p>
+            
+            <div class="note">
+                <p>🎁 <strong>Período de prueba gratuito:</strong> DiBer+ ofrece un período de prueba gratuito de <strong>3 días</strong> para nuevas suscripciones.</p>
+            </div>
+            
             <p><strong>Términos de suscripción:</strong></p>
             <ul>
                 <li>La suscripción es <strong>mensual con renovación automática</strong>.</li>
+                <li>El período de prueba gratuito comienza al iniciar la suscripción.</li>
+                <li>Al finalizar los 3 días de prueba, <strong>se cobrará automáticamente</strong> la tarifa mensual a menos que el usuario cancele antes.</li>
                 <li>El usuario puede <strong>cancelar en cualquier momento</strong> desde Google Play → Suscripciones.</li>
-                <li>Al cancelar, el acceso continúa hasta el final del período ya pagado.</li>
-                <li>Actualmente <strong>no hay período de prueba gratuita</strong>.</li>
-                <li>La validación del estado de suscripción requiere conexión a Google Play.</li>
+                <li>Al cancelar, el acceso continúa hasta el final del período ya pagado (o hasta que termine el período de prueba si se cancela durante el mismo).</li>
+                <li>La validación del estado de suscripción utiliza la <strong>caché local de Google Play Billing</strong>, requiriendo conexión periódica.</li>
             </ul>
-            <p>Sin una suscripción activa, la función de análisis (OCR) queda desactivada. La función de dashcam permanece operativa según los términos vigentes.</p>
+            <p><strong>Sin una suscripción activa</strong>, la función de análisis (OCR) queda desactivada. La función de dashcam permanece operativa según los términos vigentes.</p>
 
             <!-- 9. Sin conexión -->
             <h2>9. Funcionamiento sin Conexión</h2>
@@ -258,15 +265,17 @@
 
             <!-- 12. Responsabilidad usuario -->
             <h2>12. Responsabilidad del Usuario</h2>
-            <p>El usuario es el <strong>único responsable</strong> del cumplimiento de las leyes locales aplicables relacionadas con la grabación audiovisual (dashcam). Kalitux Innovations no se hace responsable del uso indebido de la función de grabación en jurisdicciones donde se requiera consentimiento de terceros.</p>
+            <div class="warning">
+                <p>⚠️ <strong>Importante:</strong> El usuario es el <strong>único responsable</strong> del cumplimiento de las leyes locales aplicables relacionadas con la grabación audiovisual (dashcam). Kalitux Innovations no se hace responsable del uso indebido de la función de grabación en jurisdicciones donde se requiera consentimiento de terceros.</p>
+            </div>
 
             <!-- 13. Menores -->
             <h2>13. Menores de Edad</h2>
             <p>La aplicación está dirigida <strong>exclusivamente a mayores de 18 años</strong>. No se recopila información de menores de edad.</p>
 
-            <!-- 14. Afiliación -->
-            <h2>14. Relación con Terceros</h2>
-            <p>DiBer+ <strong>no pertenece ni mantiene afiliación oficial</strong> con ninguna plataforma de transporte (Uber, Didi, Cabify, etc.). Es una herramienta independiente.</p>
+            <!-- 14. Relación con Terceros (CORREGIDO - sin nombres de plataformas) -->
+            <h2>14. Relación con Plataformas de Transporte</h2>
+            <p>DiBer+ <strong>no pertenece ni mantiene afiliación oficial</strong> con ninguna plataforma de transporte. Es una herramienta independiente desarrollada para asistir a conductores.</p>
 
             <!-- 15. Cambios -->
             <h2>15. Cambios en esta Política</h2>
